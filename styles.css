@@ -1,0 +1,327 @@
+/* =================================================================
+    Главная страница
+    ================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin: 0;
+}
+
+form input {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Montserrat", serif;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Montserrat", serif;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для карточек товаров */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transform: scale(1.0); /* Увеличивает изображение в 1.5 раза */
+    transition: transform 0.3s ease; /* Плавное изменение */
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.login-text{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.login-text img{
+    margin-right: 5px;
+}
+.logo-img {
+    height: 40px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Блок с карточками товаров */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+    padding: 20px;
+    padding-left: 120px;
+    justify-items: center;
+    margin: 10px 200px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-name {
+    font-size: 1.0em;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    padding-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search {
+        margin-top: 10px;
+    }
+}
+
+/* promo */
+.promo {
+    box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+    background: #aae7ac url(img/orig.png) no-repeat top right 0px / 1000px;
+    border-radius: 10px;
+    padding: 100px 220px;
+    color: #302C34;
+    margin-bottom: 56px;
+  }
+  
+  .promo-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 46px;
+  }
+  
+  .promo-text {
+    max-width: 538px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 10px;
+  }
+
+  .short-text {
+    width: 200px;             /* Ограничение ширины блока */
+    white-space: nowrap;      /* Запрет переноса текста */
+    overflow: hidden;         /* Скрытие текста, выходящего за пределы */
+    text-overflow: ellipsis;  /* Добавление троеточия */
+}
+
+/* =================================================================
+    Страница продукта
+    ================================================================= */
+
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+.product-description {
+    margin: 15px;
+    font-size: 1em;
+    color: #666;
+}
+
+.price {
+    margin: 15px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-detail {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image-large {
+    width: 300px;
+    max-height: 500px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transform: scale(1.0);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    transform: scale(1.05);
+}
